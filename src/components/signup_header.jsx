@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
 import logo from '../../public/assets/img/barklypets-logo-25.svg';
 import background from '../../public/assets/img/header-background.jpg';
 import '../style/signup_header.css';
