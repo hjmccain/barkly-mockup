@@ -5,29 +5,39 @@ import logo from '../../public/assets/img/barklypets-logo-25.svg';
 import background from '../../public/assets/img/header-background.jpg';
 import '../style/signup_header.css';
 
-const SignupHeader = () => {
-  return (
-    <div className="header-container">
-      <img src={logo} alt="Barkly Pets"></img>
-      <h2>Experience the on-demand pet care Park Slope knows and trusts!</h2>
-      <p>Sign up today for a free dog walk!</p>
-      <form>
-        <input type="text"></input>
-        <input type="text"></input>
-        <button type="submit">Get Started</button>
-      </form>
-    </div>
-  )
-}
+class SignupHeader extends React.Component {
+  constructor() {
+    super();
+    this.state = { showForm: 'modal hidden' }
+  }
 
-const mapStateToProps = state => ({
-  modalVisible: state.modalVisible
-})
+  toggleShow(boolean) {
+    console.log(boolean)
+    if (boolean) {
+      this.setState({ showForm: 'modal visible'})
+    } else {
+      this.setState({ showForm: 'modal hidden'})
+    }
+    console.log(this.state.showForm)
+  }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    showModal: () => {dispatch(actions.showModal()) }
+  render() {
+    return (
+      <div className="header-container">
+        <img src={logo} alt="Barkly Pets"></img>
+        <h2>Experience the on-demand pet care Park Slope knows and trusts!</h2>
+        <p>Sign up today for a free dog walk!</p>
+        <section>
+          <input type="text"></input>
+          <input type="text"></input>
+          <button onClick={() => {this.toggleShow(true)}}>Get Started</button>
+        </section>
+        <div className={this.state.showForm}>
+          <button onClick={() => {this.toggleShow(false)}}>Close</button>
+        </div>
+      </div>
+    )
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignupHeader);
+export default SignupHeader;
