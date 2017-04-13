@@ -8,13 +8,18 @@
 
 .modal {
   position: relative;
-  height: 600px;
+  height: 300px;
   width: 400px;
   background: #f3f3f3;
   margin-top: -200px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 2px 2px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal h1, h3 {
+  color: #000000;
+  font-family: 'Open Sans';
 }
 
 .modal button {
@@ -24,9 +29,20 @@
 }
 
 .header-container {
+  background-size: 100vw;
+  height: 500px;
+  text-align: center;
+}
+
+.blur {
+  width: 100vw;
+  height: 500px;
+  position: absolute;
+  z-index: -10;
+  filter: blur(2px);
   background: linear-gradient(
-      rgba(215, 226, 232, 0.3),
-      rgba(215, 226, 232, 0.3)
+      rgba(56, 63, 94, 0.3),
+      rgba(56, 63, 94, 0.3)
     ),
     url("../../public/assets/img/header-background.jpg");
   background-size: 100vw;
@@ -60,6 +76,7 @@
 
 input {
   width: 200px;
+  font-size: 12px;
 }
 
 button {
@@ -70,6 +87,7 @@ button {
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 700;
+  border-radius: 4px;
 }
 
 button, input {
@@ -80,7 +98,7 @@ button, input {
 }
 
 @media only screen and (max-width: 895px) {
-  .header-container {
+  .header-container, .blur {
     background-size: 100vh;
   }
 }
@@ -93,8 +111,8 @@ button, input {
     margin-bottom: 20px;
   }
 
-  .header-container {
+  .header-container, .blur{
     background-size: 150vh;
-    height: auto;
+    height: 700px;
   }
 }

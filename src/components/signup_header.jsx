@@ -24,16 +24,23 @@ class SignupHeader extends React.Component {
   render() {
     return (
       <div className="header-container">
+        <div className="blur"></div>
         <img src={logo} alt="Barkly Pets"></img>
         <h2>Experience the on-demand pet care Park Slope knows and trusts!</h2>
         <p>Sign up today for a free dog walk!</p>
         <section>
-          <input type="text"></input>
-          <input type="text"></input>
+          <input type="text" placeholder="Name"></input>
+          <input type="text" placeholder="Email"></input>
           <button onClick={() => {this.toggleShow(true)}}>Get Started</button>
         </section>
         <div className={this.state.showForm}>
           <button onClick={() => {this.toggleShow(false)}}>Close</button>
+          <h1 className="thanks">Thanks, Barkly!</h1>
+          <h3>
+            Best,
+            <br/>
+            Hannah
+          </h3>
         </div>
       </div>
     )

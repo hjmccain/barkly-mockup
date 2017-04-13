@@ -1,9 +1,18 @@
+.more-info-container {
+  margin-top: -20px;
+  background: white;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+}
+
 .more-info {
   font-family: 'Open Sans';
   display: flex;
   flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 h3, h4 {
