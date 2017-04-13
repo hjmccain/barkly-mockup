@@ -1,0 +1,55 @@
+.header-container {
+  background: linear-gradient(
+      rgba(215, 226, 232, 0.3),
+      rgba(215, 226, 232, 0.3)
+    ),
+    url("../../public/assets/img/header-background.jpg");
+  background-size: 120vw;
+  background-position: center;
+  height: 500px;
+  text-align: center;
+}
+
+.header-container img {
+  padding-top: 70px;
+  height: 40px;
+}
+
+.header-container h2 {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Open Sans';
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.header-container p {
+  font-family: 'Open Sans';
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+input {
+  width: 200px;
+}
+
+button {
+  width: auto;
+  height: 40px;
+  background: #36a300;
+  font-family: 'Open Sans';
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+button, input {
+  margin: 10px;
+  padding: 10px 20px 10px 20px;
+  border: 0px;
+  outline: 0;
+}
