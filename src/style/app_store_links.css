@@ -1,0 +1,7 @@
+.app-store-container img {
+  padding: 20px;
+}
+
+.logos-container {
+  display: flex;
+}
