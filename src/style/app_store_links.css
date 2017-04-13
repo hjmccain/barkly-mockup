@@ -1,7 +1,32 @@
+.app-store-container {
+  background: #f3f3f3;
+  text-align: center;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 .app-store-container img {
+  padding: 0px 20px 20px 20px;
+}
+
+.app-store-container p {
+  font-family: 'Open Sans';
+  color: #595959;
+  font-size: 18px;
+  font-weight: 700;
   padding: 20px;
 }
 
-.logos-container {
-  display: flex;
+.padding {
+  height: 40px;
+}
+
+@media only screen and (max-width: 350px) {
+  .app-store-container img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
